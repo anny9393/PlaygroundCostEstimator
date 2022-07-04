@@ -1,0 +1,136 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 1024px
+}
+img {
+  height: 150px;
+  width: 220px;
+}
+
+h3 {
+    color: darkorange;
+    width: 100%;
+    text-align: center;
+    padding: 30px;
+}
+.catalogue {
+ height: 50%;
+ width: 100%;
+ display: flex;
+ flex-wrap: wrap;
+ align-items: center;
+ justify-items: center;
+}
+.calculator {
+    height: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.catalogue-items-wrap {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+   
+}
+.catalogue-item-wrap {
+  margin-right: 30px;
+}
+
+
+.anchor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  padding: .75rem 2rem;
+  font-size: 1rem;
+  border-radius: .25rem;
+  color: black;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  border-color: darkorange;
+}
+.anchor-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.anchor::after {
+      display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: .5em;
+  vertical-align: .255em;
+  content: "";
+  border-top: .3em solid;
+  border-right: .28em solid transparent;
+  border-bottom: 0;
+  border-left: .28em solid transparent;
+}
+
+.anchor:hover {
+  color: white;
+  background-color: darkorange;
+  border-color: darkorange;
+  cursor: pointer;
+}
+
+.menu {
+  width: 170.81px;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: .25rem;
+  color: #212529;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  list-style: none;
+  margin: 70px 0 0 0 ;
+  padding: .10rem 0;
+  position: absolute;
+  text-align: center;
+}
+
+.menu-item {
+  color: #212529;
+  padding: .25rem 1.5rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.menu-item:hover {
+  background-color: #F4F6F6;
+  cursor: pointer;
+}
+
+span {
+  font-weight: bold;
+  color: darkorange;
+  font-size: 1.25rem;
+}
+.total {
+  font-weight: 900;
+}
+.catalogue-header {
+  text-transform: uppercase;
+}
+.logo {
+  width: 80px;
+  height: 60px;
+  margin-left: 30px;
+  margin-top: 30px;
+}
+.highlight {
+  background-color: orange;
+  color: white;
+}

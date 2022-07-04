@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Rhino Play School Designs</title>
+</head>
+<body>
+    <header>
+        <img class="logo" src="img/Rhinoplay-logo1-grey.png" alt="#">
+    </header>
+    <div id="app">
+    <div class="catalogue">
+        <h3 class="catalogue-header highlight">
+             Schools Catalogue 2020
+        </h3>  
+    <div class="catalogue-items-wrap">
+        <div class="catalogue-item-wrap" v-for="item of catalogueItems" 
+        :key="item.id">
+        <img :src="item.img">
+        <p class="item-title">Unit {{item.id}}</p>
+    </div>
+    </div>
+    </div>
+    <div class="calculator">
+        <h3 class="catalogue-header">
+            Price Calculator
+        </h3>
+        <dropdown-state :on-click='changeState' :items='states'></dropdown-state>
+        <p class="selectedStatecontent">Selected State: <span>{{activeState}}</span></p>
+        <dropdown-design :on-click='changeDesign' :items='ids'></dropdown-design>
+        <p class="selectedDesigncontent">Selected Design: <span>{{activeDesign}}</span>
+            , Price: <span>{{activeDesignPrice}}$</span></p>
+        <dropdown-installation :on-click='getInstallationCost' :items='installationSelect'></dropdown-installation>
+        <p class="selectedDesigncontent">Installation Cost: <span>{{installationCost}}$</span>
+       </p>
+       <dropdown-floor :on-click='getFloorPrice' :items='activeFloorOptions'></dropdown-floor>
+       <p class="selectedDesigncontent">Floor Option Cost: <span>{{floorOptionPrice}}$</span>
+      </p>
+      <dropdown-delivery :on-click='getDeliveryPrice' :items='activeDeliveryCities'></dropdown-delivery>
+      <p class="selectedDesigncontent">Delivery Cost: <span>{{deliveryPrice}}$</span>
+     </p>
+     <p class="selectedDesigncontent total"> TOTAL: <span>{{totalPrice}}$</span>
+    </div>
+    </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>
